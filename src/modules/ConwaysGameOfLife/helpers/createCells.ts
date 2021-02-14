@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 import getNeighbours from './getNeighbours';
 import { Cell } from '../typeDefs';
 
@@ -13,10 +14,13 @@ export default function createCells(props: Props): [Cell[]] {
   for (let y = 0; y < height; y += 1) {
     cells[y] = [];
     for (let x = 0; x < width; x += 1) {
+      const alive = Math.random() < 0.5;
       cells[y][x] = {
+        key: uuidv4(),
         x,
         y,
-        alive: Math.random() < 0.45, 
+        alive,
+        wasAlive: alive,
         neighbours: [],
       };
     }

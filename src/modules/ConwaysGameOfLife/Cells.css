@@ -1,6 +1,6 @@
 .cell__board {
   display: flex;
-  width: 900px;
+  width: 600px;
   margin: 0 auto;
   flex-direction: column;
 }

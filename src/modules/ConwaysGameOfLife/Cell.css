@@ -1,10 +1,7 @@
 .cell {
   position: flex;
-  width: 16px;
-  height: 16px;
-  font-size: 6px;
-  line-height: 6px;
-  border: solid black 1px;
+  width: 6px;
+  height: 6px;
 }
 
 .cell--alive {

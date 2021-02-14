@@ -14,8 +14,6 @@ export default function Cell(props: Props) {
   const { alive } = cells[y][x];
 
   return (
-    <div className={`cell cell--${alive ? 'alive' : 'dead'}`}>
-      {x}<br />{y}
-    </div>
-  )
+    <div className={`cell cell--${alive ? 'alive' : 'dead'}`} />
+  );
 }
