@@ -1,0 +1,10 @@
+.cell__board {
+  display: flex;
+  width: 900px;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+.cell__row {
+  display: flex;
+}

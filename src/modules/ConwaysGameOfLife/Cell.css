@@ -1,0 +1,16 @@
+.cell {
+  position: flex;
+  width: 16px;
+  height: 16px;
+  font-size: 6px;
+  line-height: 6px;
+  border: solid black 1px;
+}
+
+.cell--alive {
+  background-color: green;
+}
+
+.cell--dead {
+  background-color: silver;
+}
