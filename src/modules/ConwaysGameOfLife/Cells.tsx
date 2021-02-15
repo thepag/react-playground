@@ -9,8 +9,15 @@ export default function Cells() {
   const [speed, setSpeed] = useState(1000);
 
   useEffect(() => {
-    const interval = setInterval(() => { next(); }, speed);
-    return () => { clearInterval(interval) }
+    console.log({ effect: 'Cells::useEffect' });
+    const interval = setInterval(() => {
+      console.log({ effect: 'Cells::useEffect::setInterval' });
+      next();
+    }, speed);
+    return () => {
+      console.log({ effect: 'Cells::useEffect::callback' });
+      clearInterval(interval);
+    };
   }, [speed, next]);
 
   return (
