@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 
 import { ConwaysGameOfLife } from './modules';
+import { SortingAlgorithms } from './modules';
 import logo from './logo.svg';
 
 import './App.css';
@@ -32,6 +33,9 @@ export function AppRouter() {
           <Route path="/conways">
             <Conways />
           </Route>
+          <Route path="/sorting">
+            <Sorting />
+          </Route>
         </Switch>
       </div>
     </Router>
@@ -47,6 +51,9 @@ export function Navigation() {
         </li>
         <li>
           <Link to="/conways">Conway's</Link>
+        </li>
+        <li>
+          <Link to="/sorting">Sorting</Link>
         </li>
       </ul>
     </div>
@@ -69,6 +76,15 @@ function Conways() {
     <div className="page">
       <h2 className="page--title">Conway's Game Of Life</h2>
       <ConwaysGameOfLife />
+    </div>
+  );
+}
+
+function Sorting() {
+  return (
+    <div className="page">
+      <h2 className="page--title">Sorting Algorithms</h2>
+      <SortingAlgorithms />
     </div>
   );
 }
