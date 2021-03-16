@@ -8,6 +8,8 @@ import {
 
 import { ConwaysGameOfLife } from './modules';
 import { SortingAlgorithms } from './modules';
+import { FfmpegWasm } from './modules';
+
 import logo from './logo.svg';
 
 import './App.css';
@@ -36,6 +38,9 @@ export function AppRouter() {
           <Route path="/sorting">
             <Sorting />
           </Route>
+          <Route path="/ffmpegwasm">
+            <FfmpegWasmPage />
+          </Route>
         </Switch>
       </div>
     </Router>
@@ -54,6 +59,9 @@ export function Navigation() {
         </li>
         <li>
           <Link to="/sorting">Sorting</Link>
+        </li>
+        <li>
+          <Link to="/ffmpegwasm">ffmpeg.wasm</Link>
         </li>
       </ul>
     </div>
@@ -85,6 +93,15 @@ function Sorting() {
     <div className="page">
       <h2 className="page--title">Sorting Algorithms</h2>
       <SortingAlgorithms />
+    </div>
+  );
+}
+
+function FfmpegWasmPage() {
+  return (
+    <div className="page">
+      <h2 className="page--title">ffmpeg.wasm</h2>
+        <FfmpegWasm />
     </div>
   );
 }

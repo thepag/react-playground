@@ -1,0 +1,13 @@
+.file-dropzone {
+  background-color: #ccc;
+  width: 600px;
+  height: 30vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.file-dropzone__message {
+  width: 100%;
+  font-size: 18px;
+}
